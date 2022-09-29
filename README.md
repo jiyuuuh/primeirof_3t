@@ -1,3 +1,3 @@
-# primeirof_3t
-## Juliane Rincolato - 14
-1º F
+# Terceiro Trimestre
+## Juliane Rincolato
+Número 14
