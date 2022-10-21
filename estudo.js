@@ -29,18 +29,38 @@ function mostratabuada(){
     document.write("O valor do i " + i + "<br>")
     }
 }
-
+function moeda(atual){
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
 function total(){
     let v = document.getElementById("valor").value;
     let j = document.getElementById("juros").value;
     let t = document.getElementById("meses").value;
+    if (!Number(v)) {
+        alert("O campo Capital deve numérico.");
+        document.getElementById("valor").value = "";
+        document.getElementById("valor").focus();
+        return
+    }
+    if (!Number(j)) {
+        alert("O campo Juros Meses deve numérico.");
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+        return
+    }
+    if (!Number(t)) {
+        alert("O campo Número de Meses deve numérico.");
+        document.getElementById("meses").value = "";
+        document.getElementById("meses").focus();
+        return
+    }
     let r = 0;
     for(let i =1; i <= t; i++){ 
         r = v * (1+(j/100));
-        document.write ("Mês " + i + " - valor: " + r + "<br>")
+        document.write ("Mês " + i + " - valor: " + moeda(r) + "<br>")
         v = r;   
     }
-    document.write ("Resultado: " + r)
+    document.write ("Resultado: " + moeda(r));
 
 }
 
@@ -57,8 +77,27 @@ function somaNota(){
 }
 
 function media1(){
-    let val1 = document.getElementById("result").value;
-    let val2 = 4
-    let r = Number(val1) / Number(val2);
-    document.getElementById("resultado").innerHTML = "Média: " + r
+    let n1 = document.getElementById("b1").value;
+    let n2 = document.getElementById("b2").value;
+    let n3 = document.getElementById("b3").value;
+    let n4 = document.getElementById("b4").value;
+    let mes = 4
+
+    let r = (Number(n1)+Number(n2)+Number(n3)+Number(n4))/4;
+
+    document.getElementById("result1").innerHTML = "Média: " + r;
+
+}
+
+function subtracao(){
+    let n1 = document.getElementById("b1").value;
+    let n2 = document.getElementById("b2").value;
+    let n3 = document.getElementById("b3").value;
+    let n4 = document.getElementById("b4").value;
+    let sub = 240
+
+    let r = Number(n1)+Number(n2)+Number(n3)+Number(n4)-sub;
+
+    document.getElementById("result2").innerHTML = "Menos 240: " + r;
+
 }
