@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro F</title>
-  <script src="estudo.js">
-
-  </script>
+  <script src="estudo.js"></script>
+  <link rel="stylesheet" href="geral.css">
 </head>
 <body>
-    Capital: <input id="valor" type="text"> <br>
+    <div class="calculadora">
+        <div id="sptotal">
+            <span id="total">
+                Total: 0,00
+            </span>
+        </div>        
+    Capital: <br><input id="valor" type="text"> <br>
     Juros Mensais: <input id="juros" type="text"> <br>
     Número de Meses: <input id="meses" type="text"> <br>
     <button onclick="total()"> 
-        enviar
+        Enviar
     </button>
-
+    <div id="spmes">
+        <span id="mes">
+            Meses: 
+        </span>
+    </div>  
+    </div>
     <br><br><br><br><br>
 
     Bimestre 1: <input id="b1" type="text" ><br>
