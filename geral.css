@@ -5,6 +5,9 @@ width: 200px;
 padding: 10px;
 border-radius: 15px;
 text-align: center;
+margin-left: auto;
+margin-right: auto;
+box-shadow: 6px 6px rgb(85, 1, 1);
 
 }
 
@@ -13,6 +16,12 @@ text-align: center;
     color: rgb(255, 223, 210);
     padding: 5px;
     border-radius: 5px;
+}
+
+.calculadora input:focus {
+    background-color: rgb(77, 61, 57);
+    color: rgb(226, 137, 85);
+
 }
 
 #sptotal {
